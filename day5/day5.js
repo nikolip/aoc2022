@@ -14,11 +14,10 @@ moveCrate = (crates, command) => {
     crates[to].unshift(value);
   }
   return crates;
-  
 }
 
 moveCrateWith9001 = (crates,command) => {
-  const amountOfCrates =  command.toString().split(' ')[1];
+  const amountOfCrates = command.toString().split(' ')[1];
   const from = parseInt(command.toString().split(' ')[3]) - 1;
   const to = parseInt(command.toString().split(' ')[5]) - 1;
 
@@ -43,7 +42,7 @@ getVerticalStacks = (crates) => {
     }
   }
 
-return verticalStacks;
+  return verticalStacks;
 }
 
 const getTopCrates = (crates) => {
@@ -51,14 +50,13 @@ const getTopCrates = (crates) => {
     console.log(crates[i][0]);
   }
 }
-const solveFirst = () => {
 
+const solveFirst = () => {
   let crates = getCratesAndCommands()[0];
   let listOfCommands = getCratesAndCommands()[1];
-
   let verticalStacks = getVerticalStacks(crates);
-    
   let commands = listOfCommands.toString().split('\n');
+  
   for(var i = 0; i < commands.length; i++) {
     verticalStacks = moveCrate(verticalStacks, commands[i]);
   }
@@ -67,18 +65,15 @@ const solveFirst = () => {
 }
 
 const solveSecond = () => {
-
   let crates = getCratesAndCommands()[0];
   let listOfCommands = getCratesAndCommands()[1];
-
   let verticalStacks = getVerticalStacks(crates);
-    
   let commands = listOfCommands.toString().split('\n');
+
   for(var i = 0; i < commands.length; i++) {
     verticalStacks = moveCrateWith9001(verticalStacks, commands[i]);
   }
 
-  
   getTopCrates(verticalStacks);
 }
 
