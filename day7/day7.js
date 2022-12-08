@@ -39,7 +39,7 @@ const getSizes = (lines) => {
       }
     }
   }
-  console.log(sizes);
+
   const totalSizes = {};
   for(let i = 0; i < sizes.length; i++) {
     if(totalSizes[sizes[i].dir] != null){
