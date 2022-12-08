@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { getHeapSnapshot } = require('v8');
 
 const getInput = () => {
   return fs.readFileSync('input.txt').toString();
