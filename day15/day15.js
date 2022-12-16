@@ -1,7 +1,6 @@
 const fs = require('fs');
 
 //First solution was too slow for part 2 so had to create new solutions.
-
 const getInput = () => {
   return fs.readFileSync("input.txt").toString().split("\n").map((line) => {
     const values =  line.split(" ");
